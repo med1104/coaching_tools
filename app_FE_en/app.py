@@ -16,11 +16,11 @@ app_ui = ui.page_fluid(
                 ui.input_text("name", "", placeholder="Name"),
                 ui.input_text("date", "", placeholder="Date"),
                 ui.input_slider("FE1", "Activation", 0, 7, 2, step=0.1, ticks=False),
-                ui.input_slider("FE2", "Enfoque", 0, 7, 2, step=0.1, ticks=False),
+                ui.input_slider("FE2", "Focus", 0, 7, 2, step=0.1, ticks=False),
                 ui.input_slider("FE3", "Sustained effort", 0, 7, 2, step=0.1, ticks=False),
-                ui.input_slider("FE4", "Emotion", 0, 7, 2, step=0.1, ticks=False),
+                ui.input_slider("FE4", "Emotional Regulation ", 0, 7, 2, step=0.1, ticks=False),
                 ui.input_slider("FE5", "Work memory", 0, 7, 2, step=0.1, ticks=False),
-                ui.input_slider("FE6", "Action/time", 0, 7, 2, step=0.1, ticks=False),
+                ui.input_slider("FE6", "Action and Time", 0, 7, 2, step=0.1, ticks=False),
             ),
             ui.panel_main(
                 ui.tags.h2("Wheel of Executive Functions"),
@@ -51,11 +51,11 @@ def server(input, output, session):
     def plot():
         # Datos
         x = ["Activation",
-     "Enfoque",
+     "Focus",
      "Sustained effort",
-     "Emotion",
+     "Emotional Regulation ",
      "Work memory",
-     "Action/time"]
+     "Action and Time"]
         y = [input.FE1(), input.FE2(), input.FE3(),
              input.FE4(), input.FE5(), input.FE6()]
         
