@@ -5,7 +5,8 @@ shiny create myapp
 ```
 
 ```bash
-shinylive export myapp docs
+shinylive export app_FE_en docs --subdir FEen
+shinylive export app_FE_es docs --subdir FEes
 ```
 * cada vez que se actualice la app correr este comando.
 
